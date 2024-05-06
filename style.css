@@ -42,6 +42,15 @@
   color: var(--Headline-White);
 }
 
+.source-sans-3-h4-dark {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--Background-Dark-Green);
+}
+
 .source-sans-button-dark {
   color: var(--Background-Dark-Green);
   font-family: "Source Sans 3", sans-serif;
@@ -212,12 +221,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     padding: 0 180px 50px 180px;
     background-image: url("images/hero-image-compressed.png");
     background-size: 100%;
-    top: 80px;
     height: 950px;
+    gap: 50px;
   }
   /* .hero-background-rect {
     width: 100%;
@@ -226,14 +235,27 @@ body {
     background: var(--Background-Dark-Green, #00382B);
     z-index: 1;
   } */
-  .floating-content {
+
+  #top-alert {
+    display: flex;
+    width: 95%;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 0 80px 0 50px;
+    border-radius: 16px;
+    border: 1px solid var(--Background-Dark-Green, #00382B);
+    background: var(--Secondary-grey-green, #ADC2A0);
+  }
+  #floating-content {
     width: 70%;
     display: flex;
-    flex-direction: row;
-    position: absolute;
+    flex-direction: column;
+    align-items: center;
     
   }
-  .hero-text {
+  #hero-text {
     margin-right: 150px;
     height: 70%;
     width: 100%;
@@ -250,17 +272,15 @@ body {
     border: 1px solid rgba(255, 253, 248, 0.507);
     
   }
-  .button-and-phone {
+  #button-and-phone {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 50%;
+    width: 45%;
     padding: 0;
     margin: 5px;
   }
-
-  
 
   #hero-h1, #hero-h3 {
     word-wrap: normal;
