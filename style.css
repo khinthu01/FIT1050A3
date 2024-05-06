@@ -1,6 +1,79 @@
+/* Colours */
+@property --Headline-White {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #FFFFFE;
+}
+
+@property --Background-Dark-Green {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #00382B;
+}
+
+@property --Primary-Black {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #001E1D;
+}
+
+
+/* Font Styles */
+.playfair-display-h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 90px;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--Headline-White);
+}
+.libre-baskerville-h3 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+  color: var(--Headline-White);
+}
+.source-sans-3-h4 {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--Headline-White);
+}
+
+.source-sans-button-dark {
+  color: var(--Background-Dark-Green);
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Common Elements */
+.secondary-button-light {
+  display: inline-flex;
+  padding: 0 16px 0 16px;
+  align-items: flex-start;
+  gap: 4px;
+  border-radius: 6px;
+  background: var(--Secondary-Light-Green, #98B287);
+}
 /*-- -------------------------- -->
 <---           Hero             -->
 <--- -------------------------- -*/
+
+body {
+  background: #e3e2de;
+  max-width: 1920px;
+  align-items: center;
+}
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
@@ -131,6 +204,71 @@
         );
         opacity: 1;
     }
+}
+
+/* standard desktop 1920 x 1080px*/
+@media only screen and (max-width: 1920px) {
+  #hero-1059 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 180px 50px 180px;
+    background-image: url("images/hero-image-compressed.png");
+    background-size: 100%;
+    top: 80px;
+    height: 950px;
+  }
+  /* .hero-background-rect {
+    width: 100%;
+    height: 488px;
+    flex-shrink: 0;
+    background: var(--Background-Dark-Green, #00382B);
+    z-index: 1;
+  } */
+  .floating-content {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    
+  }
+  .hero-text {
+    margin-right: 150px;
+    height: 70%;
+    width: 100%;
+    padding: 80px 100px 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: #72716e8f;
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 253, 248, 0.507);
+    
+  }
+  .button-and-phone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    padding: 0;
+    margin: 5px;
+  }
+
+  
+
+  #hero-h1, #hero-h3 {
+    word-wrap: normal;
+    padding: 0;
+    margin: 0;
+  }
+
+  
 }
 
 /*-- -------------------------- -->
