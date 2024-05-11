@@ -126,6 +126,25 @@ h1, h2, h3, h4 {
   background: var(--Background-Dark-Green);
 }
 
+.highlight-button {
+  display: inline-flex;
+  padding: 0 16px 0 16px;
+  align-items: flex-start;
+  gap: 4px;
+  border-radius: 6px;
+  background: var(--Highlight-Pink);
+}
+
+.outline-button-light {
+  display: inline-flex;
+  padding: 0 16px 0 16px;
+  align-items: flex-start;
+  gap: 4px;
+  border-radius: 6px;
+  border-color: var(--Headline-White);
+  background-color: #fffffe00;
+}
+
 /*-- -------------------------- -->
 <---           Body             -->
 <--- -------------------------- -*/
@@ -145,7 +164,7 @@ body {
 /* standard desktop 1920 x 1080px*/
 @media only screen and (max-width: 1920px) {
   #hero-1059 {
-    /* top: 50px; */
+    top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,7 +244,7 @@ body {
   <--- -------------------------- -*/
   
   /* Desktop - 1024px */
-  @media only screen and (min-width: 1920px) {
+  @media only screen and (min-width: 1024px) {
     #cs-navigation .cs-dropdown {
       position: relative;
     }
@@ -342,7 +361,7 @@ body {
   <--- -------------------------- -*/
   
   /* Small Desktop - 1024px */
-  @media only screen and (min-width: 1920px) {
+  @media only screen and (min-width: 1024px) {
     body.scroll #cs-navigation {
       /* 53px, the ssme height as the cs-top-container */
       transform: translateY(-3.3125rem);
@@ -352,11 +371,15 @@ body {
       padding: 0;
       /* prevents padding from affecting height and width */
       box-sizing: border-box;
-      background-color: #fff;
+      background-color: var(--Background-Dark-Green);
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       position: fixed;
       z-index: 10000;
       transition: transform .3s;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
     }
     #cs-navigation .cs-top-bar {
       width: 100%;
@@ -366,8 +389,8 @@ body {
     }
     #cs-navigation .cs-top-container {
       width: 100%;
-      max-width: 80rem;
-      padding: 1rem;
+      max-width: 95rem;
+      /* padding: 0.2rem; */
       /* prevents padding from affecting height and width */
       box-sizing: border-box;
       display: flex;
@@ -381,9 +404,9 @@ body {
       /* grey background */
       content: '';
       width: 100vw;
-      height: 100%;
-      background: #f7f7f7;
-      opacity: 1;
+      height: 90%;
+      background: var(--Headline-White);
+      opacity: 0.6;
       position: absolute;
       display: block;
       top: 0;
@@ -439,29 +462,47 @@ body {
       display: block;
     }
     #cs-navigation .cs-container {
-      width: 100%;
-      max-width: 80rem;
-      margin: auto;
+      width: 80%;
+      /* max-width: 100rem; */
+      /* margin: auto; */
       padding: 0 1rem;
+      height: 7em;
       /* prevents padding from affectin gheight */
       box-sizing: border-box;
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
       gap: 1.5rem;
       position: relative;
+      background-color: var(--Background-Dark-Green);
+    }
+    #cs-navigation .search-bar {
+      /* float: right; */
+      padding: 12px;
+      border: none;
+      /* margin-left: 100px; */
+      font-size: 17px;
+      border-radius: 20px;
+      font-family: "Source Sans 3", sans-serif;
+      color: var(--Secondary-Grey-Green);
+    }
+    #cs-navigation .login-box {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
     }
     #cs-navigation .cs-toggle {
       display: none;
     }
     #cs-navigation .cs-logo {
       /* 40px - 44px */
-      height: clamp(2.5rem, 4vw, 2.75rem);
+      height: 5em;
       /* margin-right auto pushes everything away from it to the right */
-      margin: 0 auto 0 0;
+      /* margin: 0 auto 0 0; */
       padding: 0;
       display: flex;
-      justify-content: center;
       align-items: center;
       z-index: 100;
     }
