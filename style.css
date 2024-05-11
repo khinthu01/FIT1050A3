@@ -17,6 +17,30 @@
   initial-value: #001E1D;
 }
 
+@property --Secondary-Light-Green {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #badc93;
+}
+
+@property --Secondary-Grey-Green {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #CFE6B2;
+}
+
+
+@property --Highlight-Pink {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #dd4065;
+}
+
+@property --Background-Brown {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #a69388;
+}
 
 /* Font Styles */
 .playfair-display-h1 {
@@ -25,6 +49,7 @@
   font-weight: 700;
   font-style: normal;
   color: var(--Headline-White);
+  line-height: 100px;
 }
 .libre-baskerville-h3 {
   font-family: "Libre Baskerville", serif;
@@ -60,6 +85,23 @@
   line-height: 18px; /* 112.5% */
 }
 
+.source-sans-button-light {
+  color: var(--Headline-White);
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+}
+
+.libre-baskerville-subtitle-dark {
+  color: var(--Primary-Black);
+  font-family: "Libre Baskerville", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 12px;
+}
+
 h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
@@ -72,158 +114,44 @@ h1, h2, h3, h4 {
   align-items: flex-start;
   gap: 4px;
   border-radius: 6px;
-  background: var(--Secondary-Light-Green, #98B287);
+  background: var(--Secondary-Light-Green);
 }
+
+.primary-button-dark {
+  display: inline-flex;
+  padding: 0 16px 0 16px;
+  align-items: flex-start;
+  gap: 4px;
+  border-radius: 6px;
+  background: var(--Background-Dark-Green);
+}
+
 /*-- -------------------------- -->
-<---           Hero             -->
+<---           Body             -->
 <--- -------------------------- -*/
 
 body {
-  background: #e3e2de;
+  background: var(--Background-Brown);
   max-width: 1920px;
   align-items: center;
 }
 
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #hero-1059 {
-        /* Centers button */
-        text-align: left;
-        /* 200px - 300px - leaving extra space for the navigation */
-        padding: clamp(12.5rem, 31.95vw, 18.75rem) 1rem 0;
-        /* 130px - 200px */
-        padding-bottom: clamp(8.125rem, 16.5vw, 12.5rem);
-        position: relative;
-        z-index: 1;
-    }
-    #hero-1059 .cs-background {
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -2;
-    }
-    #hero-1059 .cs-background:before {
-        /* Overlay */
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: #1a1a1a;
-        opacity: 0.84;
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        /* prevents the cursor from interacting with it */
-        pointer-events: none;
-    }
-    #hero-1059 .cs-background img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        /* makes the top of the image start at the top of the parent */
-        object-position: top;
-    }
-    #hero-1059 .cs-container {
-        width: 100%;
-        max-width: 80rem;
-        margin: auto;
-    }
-    #hero-1059 .cs-content {
-        /* set text align to left if content needs to be left aligned */
-        text-align: center;
-        width: 100%;
-        max-width: 39.375rem;
-        display: flex;
-        flex-direction: column;
-        /* centers content horizontally, set to flex-start to left align */
-        align-items: center;
-    }
-    #hero-1059 .cs-title {
-        /* 39px - 61px */
-        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
-        font-weight: 700;
-        line-height: 1.2em;
-        text-align: inherit;
-        max-width: 51.8125rem;
-        margin: 0 auto 1rem 0;
-        color: #fff;
-        position: relative;
-    }
-    #hero-1059 .cs-text {
-        /* 16px - 20px */
-        font-size: clamp(1rem, 1.95vw, 1.25rem);
-        line-height: 1.5em;
-        text-align: inherit;
-        width: 100%;
-        /* 464px - 622px */
-        max-width: clamp(29rem, 60vw, 38.785rem);
-        margin: 0 0 2.5rem 0;
-        color: #fff;
-    }
-    #hero-1059 .cs-button-solid {
-        font-size: 1rem;
-        /* 46px - 56px */
-        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-        text-decoration: none;
-        font-weight: 700;
-        margin: 0;
-        color: #fff;
-        padding: 0 1.5rem;
-        background-color: var(--primary);
-        display: inline-block;
-        position: relative;
-        z-index: 1;
-    }
-    #hero-1059 .cs-button-solid:before {
-        content: "";
-        position: absolute;
-        display: block;
-        height: 100%;
-        width: 0%;
-        background: #000;
-        opacity: 1;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: width 0.3s;
-    }
-    #hero-1059 .cs-button-solid:hover:before {
-        width: 100%;
-    }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #hero-1059 .cs-content {
-        text-align: left;
-        align-items: flex-start;
-    }
-    #hero-1059 .cs-background:before {
-        background: linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.94) 0%,
-            rgba(0, 0, 0, 0.94) 2%,
-            rgba(0, 0, 0, 0) 100%
-        );
-        opacity: 1;
-    }
-}
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+
 
 /* standard desktop 1920 x 1080px*/
 @media only screen and (max-width: 1920px) {
   #hero-1059 {
+    /* top: 50px; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 0 180px 50px 180px;
-    background-image: url("images/hero-image-compressed.png");
+    background-image: url("images/IMG_0725_compressed.png");
     background-size: 100%;
     height: 950px;
     gap: 50px;
@@ -243,33 +171,33 @@ body {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    margin: 0 80px 0 50px;
+    margin: 0 0 0 50px;
     border-radius: 16px;
     border: 1px solid var(--Background-Dark-Green, #00382B);
-    background: var(--Secondary-grey-green, #ADC2A0);
+    background: var(--Secondary-Grey-Green);
   }
   #floating-content {
-    width: 70%;
+    width: 60%;
+    margin-right: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     
   }
   #hero-text {
-    margin-right: 150px;
     height: 70%;
     width: 100%;
-    padding: 80px 100px 50px 100px;
+    padding: 120px 100px 0 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
-    background: #72716e8f;
+    gap: 15px;
+    /* background: #72716e8f;
     border-radius: 40px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 253, 248, 0.507);
+    border: 1px solid rgba(255, 253, 248, 0.507); */
     
   }
   #button-and-phone {
@@ -277,7 +205,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 45%;
+    width: 50%;
     padding: 0;
     margin: 5px;
   }
@@ -291,390 +219,13 @@ body {
   
 }
 
-/*-- -------------------------- -->
-<---     Mobile Navigation      -->
-<--- -------------------------- -*/
 
-/* Mobile - 1023px */
-@media only screen and (max-width: 1023px) {
-    body.cs-open {
-      overflow: hidden;
-    }
-    body.scroll #cs-navigation {
-      /* 53px, same height as the cs-top-container */
-      transform: translateY(-3.3125rem);
-    }
-    #cs-navigation {
-      width: 100%;
-      /* prevents padding from affecting height and width */
-      box-sizing: border-box;
-      background-color: #fff;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-      position: fixed;
-      z-index: 10000;
-      transition: transform .3s;
-    }
-    #cs-navigation:before {
-      content: '';
-      width: 100%;
-      height: 0vh;
-      background: rgba(0, 0, 0, 0.6);
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      position: absolute;
-      display: block;
-      top: 100%;
-      right: 0;
-      z-index: -1100;
-      opacity: 0;
-      transition: height .5s, opacity .5s;
-    }
-    #cs-navigation.cs-active:before {
-      height: 150vh;
-      opacity: 1;
-    }
-    #cs-navigation.cs-active .cs-ul-wrapper {
-      opacity: 1;
-      transform: scaleY(1);
-      transition-delay: .15s;
-    }
-    #cs-navigation.cs-active .cs-li {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    #cs-navigation .cs-top-bar {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #cs-navigation .cs-top-container {
-      width: 100%;
-      padding: 1rem 1.5rem;
-      /* prevents padding from affecting height and width */
-      box-sizing: border-box;
-      background-color: #f7f7f7;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
-    #cs-navigation .cs-top-contact {
-      width: auto;
-      /* prevents padding from affecting height and width */
-      box-sizing: border-box;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* 16px - 24px */
-      gap: clamp(1rem, 2vw, 1.5rem);
-    }
-    #cs-navigation .cs-top-link {
-      font-size: 0.875rem;
-      line-height: 1.5em;
-      text-decoration: none;
-      margin: 0;
-      color: var(--bodyTextColor);
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 0.5rem;
-      position: relative;
-    }
-    #cs-navigation .cs-top-link:nth-of-type(2) {
-      display: none;
-    }
-    #cs-navigation .cs-link-icon {
-      width: 1rem;
-      height: auto;
-      display: block;
-    }
-    #cs-navigation .cs-top-social {
-      visibility: visible;
-      opacity: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-      transition: opacity .3s, visibility .3s, height .3s;
-    }
-    #cs-navigation .cs-social-link {
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-    }
-    #cs-navigation .cs-social-icon {
-      width: 1.25rem;
-      height: auto;
-      display: block;
-    }
-    #cs-navigation .cs-container {
-      width: 100%;
-      padding: 1.25rem 1rem;
-      /* prevents padding from affecting height and width */
-      box-sizing: border-box;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      position: relative;
-    }
-    #cs-navigation .cs-logo {
-      width: auto;
-      height: 2.5rem;
-      margin: 0 auto 0 0;
-      padding: 0;
-      /* prevents padding from affecting height and width */
-      box-sizing: border-box;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      order: 1;
-      z-index: 10;
-    }
-    #cs-navigation .cs-logo img {
-      width: auto;
-      height: 100%;
-      /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
-      object-fit: contain;
-    }
-    #cs-navigation .cs-nav {
-      order: 2;
-    }
-    #cs-navigation .cs-toggle {
-      width: 2.875rem;
-      height: 2.875rem;
-      margin: 0 0 0 auto;
-      background-color: var(--primary);
-      border: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: transform .6s;
-    }
-    #cs-navigation .cs-toggle.cs-active {
-      transform: rotate(180deg);
-    }
-    #cs-navigation .cs-active .cs-line1 {
-      top: 50%;
-      transform: translate(-50%, -50%) rotate(225deg);
-    }
-    #cs-navigation .cs-active .cs-line2 {
-      top: 50%;
-      transform-origin: center;
-      transform: translate(-50%, -50%) translateY(0) rotate(-225deg);
-    }
-    #cs-navigation .cs-active .cs-line3 {
-      bottom: 100%;
-      opacity: 0;
-    }
-    #cs-navigation .cs-box {
-      /* 24px - 28px */
-      width: clamp(1.5rem, 2vw, 1.75rem);
-      height: 0.75rem;
-      position: relative;
-    }
-    #cs-navigation .cs-line {
-      width: 100%;
-      height: 2px;
-      border-radius: 2px;
-      background-color: #FAFBFC;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    #cs-navigation .cs-line1 {
-      top: 0;
-      transform-origin: center;
-      transition: transform .5s, top .3S, left .3S;
-      animation-duration: .7s;
-      animation-timing-function: ease;
-      animation-fill-mode: forwards;
-      animation-direction: normal;
-    }
-    #cs-navigation .cs-line2 {
-      top: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      transition: top .3s, left .3s, transform .5s;
-      animation-duration: .7s;
-      animation-timing-function: ease;
-      animation-fill-mode: forwards;
-      animation-direction: normal;
-    }
-    #cs-navigation .cs-line3 {
-      bottom: 0;
-      transition: bottom .3s, opacity .3s;
-    }
-    #cs-navigation .cs-ul-wrapper {
-      width: 100%;
-      height: auto;
-      padding-bottom: 3rem;
-      opacity: 0;
-      background-color: #fff;
-      box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
-      overflow: hidden;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      z-index: -1;
-      transform: scaleY(0);
-      transform-origin: top;
-      transition: transform .4s, opacity .3s;
-    }
-    #cs-navigation .cs-ul {
-      margin: 0;
-      padding: 3rem 0 0 0;
-      width: 100%;
-      height: auto;
-      max-height: 65vh;
-      overflow: scroll;
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.25rem;
-    }
-    #cs-navigation .cs-li {
-      width: 100%;
-      text-align: center;
-      list-style: none;
-      margin-right: 0;
-      /* transition from these values */
-      transform: translateY(-4.375rem);
-      opacity: 0;
-      transition: transform .6s, opacity .9s;
-    }
-    #cs-navigation .cs-li:nth-of-type(1) {
-      transition-delay: .05s;
-    }
-    #cs-navigation .cs-li:nth-of-type(2) {
-      transition-delay: .1s;
-    }
-    #cs-navigation .cs-li:nth-of-type(3) {
-      transition-delay: .15s;
-    }
-    #cs-navigation .cs-li:nth-of-type(4) {
-      transition-delay: .2s;
-    }
-    #cs-navigation .cs-li:nth-of-type(5) {
-      transition-delay: .25s;
-    }
-    #cs-navigation .cs-li:nth-of-type(6) {
-      transition-delay: .3s;
-    }
-    #cs-navigation .cs-li:nth-of-type(7) {
-      transition-delay: .35s;
-    }
-    #cs-navigation .cs-li:nth-of-type(8) {
-      transition-delay: .4s;
-    }
-    #cs-navigation .cs-li:nth-of-type(9) {
-      transition-delay: .45s;
-    }
-    #cs-navigation .cs-li:nth-of-type(10) {
-      transition-delay: .5s;
-    }
-    #cs-navigation .cs-li:nth-of-type(11) {
-      transition-delay: .55s;
-    }
-    #cs-navigation .cs-li:nth-of-type(12) {
-      transition-delay: .6s;
-    }
-    #cs-navigation .cs-li:nth-of-type(13) {
-      transition-delay: .65s;
-    }
-    #cs-navigation .cs-li-link {
-      /* 16px - 24px */
-      font-size: clamp(1rem, 2.5vw, 1.5rem);
-      line-height: 1.2em;
-      text-decoration: none;
-      margin: 0;
-      color: var(--headerColor);
-      display: inline-block;
-      position: relative;
-    }
-    #cs-navigation .cs-li-link.cs-active {
-      color: var(--primary);
-    }
-    #cs-navigation .cs-li-link:hover {
-      color: var(--primary);
-    }
-    #cs-navigation .cs-button-solid {
-      display: none;
-    }
-  }
-  /* Tablet - 768px */
-  @media only screen and (min-width: 48rem) {
-    #cs-navigation .cs-top-link:nth-of-type(2) {
-      display: flex;
-    }
-  }
-  
   /*-- -------------------------- -->
   <---     Navigation Dropdown    -->
   <--- -------------------------- -*/
   
-  /* Mobile - 1023px */
-  @media only screen and (max-width: 1023px) {
-    #cs-navigation .cs-li {
-      text-align: center;
-      width: 100%;
-      display: block;
-    }
-    #cs-navigation .cs-dropdown {
-      position: relative;
-      color: var(--bodyTextColorWhite);
-    }
-    #cs-navigation .cs-dropdown.cs-active .cs-drop-ul {
-      height: auto;
-      opacity: 1;
-      visibility: visible;
-      margin: 0.75rem 0 0 0;
-      padding: 0.75rem 0;
-    }
-    #cs-navigation .cs-dropdown.cs-active .cs-drop-link {
-      opacity: 1;
-    }
-    #cs-navigation .cs-dropdown .cs-li-link {
-      position: relative;
-      transition: opacity .3s;
-    }
-    #cs-navigation .cs-drop-icon {
-      width: 0.9375rem;
-      height: auto;
-      position: absolute;
-      top: 50%;
-      right: -1.25rem;
-      transform: translateY(-50%);
-    }
-    #cs-navigation .cs-drop-ul {
-      width: 100%;
-      height: 0;
-      margin: 0;
-      padding: 0;
-      background-color: var(--primary);
-      overflow: hidden;
-      opacity: 0;
-      visibility: hidden;
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.75rem;
-      transition: padding .3s, margin .3s, height .3s, opacity .3s, visibility .3s;
-    }
-    #cs-navigation .cs-drop-li {
-      list-style: none;
-    }
-    #cs-navigation .cs-li-link.cs-drop-link {
-      /* 14px - 16px */
-      font-size: clamp(0.875rem, 2vw, 1.25rem);
-      color: #fff;
-    }
-  }
   /* Desktop - 1024px */
-  @media only screen and (min-width: 64rem) {
+  @media only screen and (min-width: 1920px) {
     #cs-navigation .cs-dropdown {
       position: relative;
     }
@@ -791,7 +342,7 @@ body {
   <--- -------------------------- -*/
   
   /* Small Desktop - 1024px */
-  @media only screen and (min-width: 64rem) {
+  @media only screen and (min-width: 1920px) {
     body.scroll #cs-navigation {
       /* 53px, the ssme height as the cs-top-container */
       transform: translateY(-3.3125rem);
