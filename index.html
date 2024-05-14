@@ -100,12 +100,17 @@
                             <h4 class="source-sans-3-h4">Contact Us</h4>
                         </a>
                     </li>
-                    <li>
+                    <li class="cs-li">
                          <!-- Search Bar -->
                         <input class="search-bar" type="text" placeholder="Search...">
                     </li>
-                    <li>
-                        <img src="images\icons\cart_icon.svg" alt="shopping cart icon">
+                    <li class="cs-li">
+                        <div id="cart">
+                            <img src="images\icons\cart_icon.svg" alt="shopping cart icon">
+                            <span id="floating-cart-counter">
+                                <p id="cart-counter-value" class="libre-baskerville-subtitle-light">0</p>
+                            </span>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -155,82 +160,169 @@
 </section>
 
 <!-- ============================================ -->
-<!--                  Services                    -->
+<!--            Flowers By Occasion               -->
 <!-- ============================================ -->
 
-<section id="services-1081">
+<section class="flower-category-section">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Services</span>
-            <h2 class="cs-title">Expert Auto Repair Services In Oak Harbor</h2>
-            <p class="cs-text">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
-            </p>
-        </div>
+            
+            <h2 class="libre-baskerville-h2-dark">Shop Flowers By Occasion</h2>
+                
+           
+            
+        </div>                  
         <ul class="cs-card-group">
             <li class="cs-item">
-                <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mech3.jpg">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mech3.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mech3.jpg" alt="mechanic" width="413" height="240" aria-hidden="true">
-                </picture>
-                <h3 class="cs-h3">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/engine.svg" alt="icon" width="32" height="32" aria-hidden="true">
-                    Engine Overhaul
-                </h3>
-                <p class="cs-item-text">
-                    If your engine isn’t working properly chances are you’re in for a costly repair. An engine replacement of expansion, succession...
-                </p>
                 <a href="" class="cs-link">
-                    Read More
-                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                    <picture class="cs-picture">
+                        <img height="560px" src="images\flowers\anniversary_compressed.png" alt="bouquet of flowers for anniversaries">
+                    </picture>
+                    <div class="card-overlay-rectangle">
+                        <div class="cs-item-text">
+                            <h3 class="libre-baskerville-h3">
+                                Anniversary
+                            </h3>
+                            <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="20" height="20" decoding="async" aria-hidden="true" >
+                        </div>
+                        
+                    </div>
                 </a>
             </li>
             <li class="cs-item">
-                <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mech2.jpg">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mech2.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mech2.jpg" alt="mechanic" width="413" height="240" aria-hidden="true">
-                </picture>
-                <h3 class="cs-h3">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/steering-wheel.svg" alt="icon" width="32" height="32" aria-hidden="true">
-                    Engine Overhaul
-                </h3>
-                <p class="cs-item-text">
-                    If your engine isn’t working properly chances are you’re in for a costly repair. An engine replacement of expansion, succession...
-                </p>
                 <a href="" class="cs-link">
-                    Read More
-                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                    <picture class="cs-picture">
+                        <img height="560px" src="images\flowers\birthday_compressed.png" alt="bouquet of flowers for birthdays">
+                    </picture>
+                    <div class="card-overlay-rectangle">
+                        <div class="cs-item-text">
+                            <h3 class="libre-baskerville-h3">
+                                Birthday
+                            </h3>
+                            <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="20" height="20" decoding="async" aria-hidden="true" >
+                        </div>
+                        
+                    </div>
                 </a>
             </li>
             <li class="cs-item">
-                <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mech1.jpg">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mech1.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mech1.jpg" alt="mechanic" width="413" height="240" aria-hidden="true">
-                </picture>
-                <h3 class="cs-h3">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/oil-bottle.svg" alt="icon" width="32" height="32" aria-hidden="true">
-                    Engine Overhaul
-                </h3>
-                <p class="cs-item-text">
-                    If your engine isn’t working properly chances are you’re in for a costly repair. An engine replacement of expansion, succession...
-                </p>
                 <a href="" class="cs-link">
-                    Read More
-                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                    <picture class="cs-picture">
+                        <img height="560px" src="images\flowers\bridal_compressed.png" alt="bouquet of flowers for weddings">
+                    </picture>
+                    <div class="card-overlay-rectangle">
+                        <div class="cs-item-text">
+                            <h3 class="libre-baskerville-h3">
+                                Bridal
+                            </h3>
+                            <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="20" height="20" decoding="async" aria-hidden="true" >
+                        </div>
+                        
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <img height="560px" src="images\flowers\graduation_compressed.png" alt="bouquet of flowers for graduation">
+                    </picture>
+                    <div class="card-overlay-rectangle">
+                        <div class="cs-item-text">
+                            <h3 class="libre-baskerville-h3">
+                                Graduation
+                            </h3>
+                            <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="20" height="20" decoding="async" aria-hidden="true" >
+                        </div>
+                        
+                    </div>
                 </a>
             </li>
         </ul>
     </div>
 </section>
+
+<!-- ============================================ -->
+<!--              Flowers By Type                 -->
+<!-- ============================================ -->
+
+<section class="flower-category-section">
+    <div class="cs-container">
+        <div class="cs-content">
+            
+            <h2 class="libre-baskerville-h2-dark">Shop Flowers By Type</h2>
+                
+           
+            
+        </div>                  
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <img height="560px" src="images\flowers\anniversary_compressed.png" alt="bouquet of flowers for anniversaries">
+                    </picture>
+                    <div class="card-overlay-rectangle">
+                        <div class="cs-item-text">
+                            <h3 class="libre-baskerville-h3">
+                                Anniversary
+                            </h3>
+                            <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="20" height="20" decoding="async" aria-hidden="true" >
+                        </div>
+                        
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <img height="560px" src="images\flowers\birthday_compressed.png" alt="bouquet of flowers for birthdays">
+                    </picture>
+                    <div class="card-overlay-rectangle">
+                        <div class="cs-item-text">
+                            <h3 class="libre-baskerville-h3">
+                                Birthday
+                            </h3>
+                            <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="20" height="20" decoding="async" aria-hidden="true" >
+                        </div>
+                        
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <img height="560px" src="images\flowers\bridal_compressed.png" alt="bouquet of flowers for weddings">
+                    </picture>
+                    <div class="card-overlay-rectangle">
+                        <div class="cs-item-text">
+                            <h3 class="libre-baskerville-h3">
+                                Bridal
+                            </h3>
+                            <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="20" height="20" decoding="async" aria-hidden="true" >
+                        </div>
+                        
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <img height="560px" src="images\flowers\graduation_compressed.png" alt="bouquet of flowers for graduation">
+                    </picture>
+                    <div class="card-overlay-rectangle">
+                        <div class="cs-item-text">
+                            <h3 class="libre-baskerville-h3">
+                                Graduation
+                            </h3>
+                            <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="20" height="20" decoding="async" aria-hidden="true" >
+                        </div>
+                        
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
                                 
 
 <!-- ============================================ -->
