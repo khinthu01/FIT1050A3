@@ -5,6 +5,14 @@
   initial-value: #FFFFFE;
 }
 
+
+
+@property --OffWhite {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #e6deda;
+}
+
 @property --Background-Dark-Green {
   syntax: "<color>";
   inherits: false;
@@ -128,7 +136,7 @@ h1, h2, h3, h4 {
   padding: 0 16px 0 16px;
   align-items: flex-start;
   gap: 4px;
-  border-radius: 6px;
+  border-radius: 25px;
   background: var(--Secondary-Light-Green);
 }
 
@@ -137,7 +145,7 @@ h1, h2, h3, h4 {
   padding: 0 16px 0 16px;
   align-items: flex-start;
   gap: 4px;
-  border-radius: 6px;
+  border-radius: 25px;
   background: var(--Background-Dark-Green);
 }
 
@@ -146,7 +154,7 @@ h1, h2, h3, h4 {
   padding: 0 16px 0 16px;
   align-items: flex-start;
   gap: 4px;
-  border-radius: 6px;
+  border-radius: 25px;
   background: var(--Highlight-Pink);
 }
 
@@ -155,7 +163,7 @@ h1, h2, h3, h4 {
   padding: 0 16px 0 16px;
   align-items: flex-start;
   gap: 4px;
-  border-radius: 6px;
+  border-radius: 25px;
   border-color: var(--Headline-White);
   background-color: #fffffe00;
 }
@@ -195,10 +203,10 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 180px 50px 180px;
+    padding: 50px 180px 0 180px;
     background-image: url("images/IMG_0725_compressed.png");
     background-size: 100%;
-    height: 950px;
+    height: 900px;
     gap: 50px;
   }
   /* .hero-background-rect {
@@ -621,7 +629,7 @@ html, body {
   .flower-category-section {
     width: 100%;
     padding: 50px 0 50px 0;
-    background-color: var(--Headline-White);
+    background-color: var(--OffWhite);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -685,6 +693,8 @@ html, body {
     position: relative;
   }
 
+
+  /* source for glass effect: https://css.glass/ */
   .flower-category-section .card-overlay-rectangle {
     width:100%;
     height:120px;
