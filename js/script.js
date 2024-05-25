@@ -61,6 +61,7 @@ $(document).ready(
         })
 
         function updateCartTotal() {
+            cartTotal = 0;
             cart.forEach(element => {
                 cartTotal += element.total
             })
