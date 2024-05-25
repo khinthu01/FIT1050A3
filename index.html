@@ -10,12 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css\style.css">
     <title>Document</title>
     <link rel="logo icon" href="images\logo_favicon\favicon.ico" type="images\logo_favicon\favicon-16x16.png">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     
 </head>
 <body>
+    <script src="js\script.js"></script>
     <!-- ============================================ -->
 <!--                 Navigation                   -->
 <!-- ============================================ -->
@@ -23,18 +25,18 @@
 
 <header id="cs-navigation">
     <div class="cs-top-bar">
-        <div class="cs-top-container">
+        <div class="cs-top-contact-container">
             <div class="cs-top-contact">
                 <a href="" class="cs-top-link">
-                    <img class="cs-link-icon" src="images\icons\phone.png" alt="phone icon" width="16" height="16" aria-hidden="true" decoding="async">
-                    <p class="libre-baskerville-subtitle-dark">Call us: 03 599 632 62</p>
+                    <p class="libre-baskerville-subtitle-dark" style="font-size: 18px;">&#9743;</p>
+                    <p class="libre-baskerville-subtitle-dark"> Call us: 03 599 632 62</p>
                 </a>
                 <a href="" class="cs-top-link">
-                    <img class="cs-link-icon" src="images\icons\email.png" alt="email icon" width="20" height="20" aria-hidden="true" decoding="async">
+                    <p class="libre-baskerville-subtitle-dark" style="font-size: 18px;">&#9993;</p>
                     <p class="libre-baskerville-subtitle-dark">Email: team@cranbourneflorist.com.au</p>
                 </a>
                 <a href="" class="cs-top-link">
-                    <img class="cs-link-icon" src="images\icons\location.png" alt="location pin icon" width="20" height="20" aria-hidden="true" decoding="async">
+                    <img src="images\icons\location.svg" alt="location-icon" height="16px">
                     <p class="libre-baskerville-subtitle-dark">Location: 66-68 High St, Cranbourne, 3977</p>
                 </a>
             </div>
@@ -130,6 +132,9 @@
         </button> -->
     </div>
 </header>
+
+<!--  cart modal  -->
+
                                 
 <!-- ============================================ -->
 <!--                    Hero                      -->
@@ -243,85 +248,151 @@
 </section>
 
 <!-- ============================================ -->
-<!--              Flowers By Type                 -->
+<!--              Popular Bouquets                -->
 <!-- ============================================ -->
 
 <section class="flower-category-section">
     <div class="cs-container">
         <div class="cs-content">
             
-            <h2 class="libre-baskerville-h2-dark">Shop Flowers By Type</h2>
+            <h2 class="libre-baskerville-h2-dark">Popular Bouquets</h2>
                 
            
             
         </div>                  
         <ul class="cs-card-group">
-            <li class="cs-item">
+            <li class="cs-product-item">
                 <a href="" class="cs-link">
                     <picture class="cs-picture">
-                        <img height="500px" src="images\flowers\peonies_compressed.png" alt="bouquet of peonies in vase">
+                        <img height="370px" src="images\flowers\peonies_compressed.png" alt="bouquet of peonies in vase">
                     </picture>
-                    <div class="card-overlay-rectangle">
-                        <div class="cs-item-text">
-                            <h3 class="libre-baskerville-h3">
-                                Peonies
-                            </h3>
-                            <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="20" height="20" decoding="async" aria-hidden="true" >
-                        </div>
-                        
-                    </div>
                 </a>
+                <div class="product-title">
+                    <h4 class="libre-baskerville-h4-dark">
+                        Pink Peonies Bouquet
+                    </h4>
+                </div>
+                <div class="star-rating">
+                    <p class="closed-star">&#9733;</p>
+                    <p class="closed-star">&#9733;</p>
+                    <p class="open-star">&#9734;</p>
+                </div>
+                <div class="product-price">
+                    <h4 class="source-sans-3-h4-dark">$135</h4>
+                </div>
+                <div class="add-product">
+                    <button class="secondary-button-light add-to-cart-button">
+                        <p class="source-sans-button-dark">Add to Cart</p>
+                    </button>
+                </div>
             </li>
-            <li class="cs-item">
+            <li class="cs-product-item">
                 <a href="" class="cs-link">
                     <picture class="cs-picture">
-                        <img height="500px" src="images\flowers\roses_compressed.png" alt="bouquet of roses in vase">
+                        <img height="370px" src="images\flowers\roses_compressed.png" alt="bouquet of roses in vase">
                     </picture>
-                    <div class="card-overlay-rectangle">
-                        <div class="cs-item-text">
-                            <h3 class="libre-baskerville-h3">
-                                Roses
-                            </h3>
-                            <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="20" height="20" decoding="async" aria-hidden="true" >
-                        </div>
-                        
-                    </div>
+
                 </a>
+                <div class="product-title">
+                    <h4 class="libre-baskerville-h4-dark">
+                        Autumn Roses Bouquet
+                    </h4>
+                </div>
+                <div class="star-rating">
+                    <p class="closed-star">&#9733;</p>
+                    <p class="closed-star">&#9733;</p>
+                    <p class="open-star">&#9734;</p>
+                </div>
+                <div class="product-price">
+                    <h4 class="source-sans-3-h4-dark">$135</h4>
+                </div>
+                <div class="add-product">
+                    <button class="secondary-button-light add-to-cart-button">
+                        <p class="source-sans-button-dark">Add to Cart</p>
+                    </button>
+                </div>
             </li>
-            <li class="cs-item">
+            <li class="cs-product-item">
                 <a href="" class="cs-link">
                     <picture class="cs-picture">
-                        <img height="500px" src="images\flowers\tulips_compressed.png" alt="bouquet of tulips in vase">
+                        <img height="370px" src="images\flowers\tulips_compressed.png" alt="bouquet of tulips in vase">
                     </picture>
-                    <div class="card-overlay-rectangle">
-                        <div class="cs-item-text">
-                            <h3 class="libre-baskerville-h3">
-                                Tulips
-                            </h3>
-                            <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="20" height="20" decoding="async" aria-hidden="true" >
-                        </div>
-                        
-                    </div>
                 </a>
+                <div class="product-title">
+                    <h4 class="libre-baskerville-h4-dark">
+                        Pink Tulips Bouquet
+                    </h4>
+                </div>
+                <div class="star-rating">
+                    <p class="closed-star">&#9733;</p>
+                    <p class="closed-star">&#9733;</p>
+                    <p class="open-star">&#9734;</p>
+                </div>
+                <div class="product-price">
+                    <h4 class="source-sans-3-h4-dark">$135</h4>
+                </div>
+                <div class="add-product">
+                    <button class="secondary-button-light add-to-cart-button">
+                        <p class="source-sans-button-dark">Add to Cart</p>
+                    </button>
+                </div>
             </li>
-            <li class="cs-item">
+            <li class="cs-product-item">
                 <a href="" class="cs-link">
                     <picture class="cs-picture">
-                        <img height="500px" src="images\flowers\wildflowers_compressed.png" alt="bouquet of wildflowers in a vase by a window">
+                        <img height="370px" src="images\flowers\wildflowers_compressed.png" alt="bouquet of wildflowers in a vase by a window">
                     </picture>
-                    <div class="card-overlay-rectangle">
-                        <div class="cs-item-text">
-                            <h3 class="libre-baskerville-h3">
-                                Wildflowers
-                            </h3>
-                            <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="20" height="20" decoding="async" aria-hidden="true" >
-                        </div>
-                        
-                    </div>
                 </a>
+                <div class="product-title">
+                    <h4 class="libre-baskerville-h4-dark">
+                        Spring Wildflower Bouquet
+                    </h4>
+                </div>
+                <div class="star-rating">
+                    <p class="closed-star">&#9733;</p>
+                    <p class="closed-star">&#9733;</p>
+                    <p class="open-star">&#9734;</p>
+                </div>
+                <div class="product-price">
+                    <h4 class="source-sans-3-h4-dark">$135</h4>
+                </div>
+                <div class="add-product">
+                    <button class="secondary-button-light add-to-cart-button">
+                        <p class="source-sans-button-dark">Add to Cart</p>
+                    </button>
+                </div>
             </li>
         </ul>
     </div>
+</section>
+            
+<!-- ============================================ -->
+<!--             About + Contact Us               -->
+<!-- ============================================ -->
+
+<section id="about">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="libre-baskerville-h3-highlight">About Us</span>
+            <!-- source: https://cranbourneflorist.com.au/about-us/ -->
+            <h1 class="libre-baskerville-h2-dark">Flowers Arranged With Love</h1>
+            <p class="source-sans-p-dark">
+                <strong>Cranbourne Florist</strong> is a <strong>family owned</strong> business based in Cranbourne and has been <strong>locally owned</strong> and operated for 19 years. <br> <br>
+                All our flowers are fresh and supplied by local growers. Our bouquets are arranged personally by a <strong>professional florist</strong> and we have a range of bouquets for any occasion. <br> <br>
+                Cranbourne Florist are proud joint winners of a <strong>Gold, Silver and Bronze Medals</strong> in the Melbourne International Flower and Garden Show.<br> <br> <br> 
+                Our flowers are available for delivery (same day if you order before 12pm) or pick up at our stored located at <strong>66-68 High St, Cranbourne, 3977.</strong>
+            </p>
+            
+        </div>
+        
+            
+        <img height="600px" src="images\florist_compressed_cool.jpg" alt="Photo of florist arrange bouquet">
+            
+    </div>
+    <div>
+        <iframe class="location-view" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25114.02481752893!2d145.24533507431636!3d-38.11104569999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad60fb9aeda8fa9%3A0x7302a0d9921ad430!2sCranbourne%20Florist!5e0!3m2!1sen!2sau!4v1716629176604!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+   
 </section>
                                 
                                 
@@ -341,57 +412,93 @@
                     <img src="images\logo.svg" alt="logo" aria-hidden="true" loading="lazy" decoding="async" width="210" height="80">
                 </a>
             </div>
-            <ul class="cs-ul">
+            <ul class="cs-ul cs-footer-nav">
                 <li class="cs-li">
-                    <span class="cs-header">Quick Links</span>
+                    <span class="cs-header">
+                        <h4 class="libre-baskerville-h4">Navigation</h4>
+                    </span>
                 </li>
                 <li class="cs-li">
-                    <a href="" class="cs-link">Services</a>
+                    <a href="" class="cs-link">
+                        <h4 class="source-sans-3-h4">Home</h4>
+                    </a>
                 </li>
                 <li class="cs-li">
-                    <a href="" class="cs-link">Contact us</a>
+                    <a href="" class="cs-link">
+                        <h4 class="source-sans-3-h4">Flowers</h4>
+                    </a>
                 </li>
                 <li class="cs-li">
-                    <a href="" class="cs-link">FAQ</a>
-                </li>
-            </ul>
-            <ul class="cs-ul">
-                <li class="cs-li">
-                    <span class="cs-header">Quick Links</span>
-                </li>
-                <li class="cs-li">
-                    <a href="" class="cs-link">Semaglutide</a>
+                    <a href="" class="cs-link">
+                        <p class="source-sans-p-light">
+                            Flowers By Occasion
+                        </p>
+                        <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="10" height="10" decoding="async" aria-hidden="true" >
+                    </a>
                 </li>
                 <li class="cs-li">
-                    <a href="" class="cs-link">Dermal Filler</a>
+                    <a href="" class="cs-link">
+                        <p class="source-sans-p-light">
+                            Flowers By Type
+                        </p>
+                        <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="10" height="10" decoding="async" aria-hidden="true" >
+                    </a>
                 </li>
                 <li class="cs-li">
-                    <a href="" class="cs-link">Tirezapetide</a>
+                    <a href="" class="cs-link">
+                        <p class="source-sans-p-light">
+                            Flowers By Season
+                        </p>
+                        <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="10" height="10" decoding="async" aria-hidden="true" >
+                    </a>
                 </li>
                 <li class="cs-li">
-                    <a href="" class="cs-link">Neurotoxins</a>
+                    <a href="" class="cs-link">
+                        <h4 class="source-sans-3-h4">Accessories</h4>
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <a href="" class="cs-link">
+                        <p class="source-sans-p-light">
+                            Ribbons
+                        </p>
+                        <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="10" height="10" decoding="async" aria-hidden="true" >
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <a href="" class="cs-link">
+                        <p class="source-sans-p-light">
+                            Balloons
+                        </p>
+                        <img class="cs-side-icon" src="images\icons\chevron_down_white.svg" alt="dropdown icon" width="10" height="10" decoding="async" aria-hidden="true" >
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <a href="" class="cs-link">
+                        <h4 class="source-sans-3-h4">Contact Us</h4>
+                    </a>
                 </li>
             </ul>
             <ul class="cs-ul cs-contact-ul">
                 <li class="cs-li">
-                    <span class="cs-header">Contact</span>
+                    <h4 class="libre-baskerville-h4">Contact Info</h4>
                 </li>
                 <li class="cs-li">
-                    <a href="tel:555-456 7899" class="cs-link">
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fphone-stroke.svg" alt="icon" loading="lazy" decoding="async" width="24" height="24" aria-hidden="true">
-                        +1 (555) 456 7899
+                    <a href="tel:03 599 632 62" class="cs-link">
+                        <p class="source-sans-p-light" style="font-size: 24px;">&#9743;</p>
+                        <h4 class="source-sans-p-light" >Call us: 03 599 632 62</h4>
                     </a>
                 </li>
                 <li class="cs-li">
                     <a href="mailto:info@example.com" class="cs-link">
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fmail-stroke.svg" alt="icon" loading="lazy" decoding="async" width="24" height="24" aria-hidden="true">
-                        info@example.com
+                        <p class="source-sans-p-light" style="font-size: 24px;">&#9993;</p>
+                        <h4 class="source-sans-p-light" >Email: team@cranbourneflorist.com.au</h4>
                     </a>
                 </li>
                 <li class="cs-li">
                     <a href="" class="cs-link" target="_blank" rel="noopener">
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fpin-stroke.svg" alt="icon" loading="lazy" decoding="async" width="24" height="24" aria-hidden="true">
-                        121 King St, Melbourne VIC 3000, Australia 
+                        <img src="images\icons\location-light.svg" alt="location-icon" height="22px">
+                        <h4 class="source-sans-p-light" >Location: 66-68 High St, Cranbourne, 3977</h4>
                     </a>
                 </li>
             </ul>
@@ -400,7 +507,7 @@
         <!--Bottom Section-->
         <div class="cs-bottom">
             <span class="cs-copyright">
-                © Copyright 2023 - <a href="" class="cs-copyright-link" target="_blank" rel="noopener">CodeStitch Health & Wellness</a>
+                © Copyright 2023 - <a href="" class="cs-copyright-link" target="_blank" rel="noopener">CodeStitch Design Template</a>
             </span>
         </div>
     </div>
