@@ -85,6 +85,15 @@
   font-size: 54px;
   color: var(--Primary-Black);
 }
+
+.libre-baskerville-cart-header-dark {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  color: var(--Primary-Black);
+}
+
 .libre-baskerville-h3 {
   font-family: "Libre Baskerville", serif;
   font-weight: 400;
@@ -137,6 +146,8 @@
   line-height: normal;
   color: var(--Background-Dark-Green);
 }
+
+
 
 .source-sans-3-h4-light-green {
   font-family: "Source Sans 3", sans-serif;
@@ -284,6 +295,15 @@ h3, h4 {
   margin-left: 20px;
 }
 
+/*  source: https://stackoverflow.com/questions/12639823/hr-not-showing  */
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;               
+  background-color:var(--Primary-Black);
+  height: 1px;
+}
 
 /*-- -------------------------- -->
 <---           Body             -->
@@ -300,6 +320,113 @@ html, body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+}
+
+
+/* cart modal  */
+#cart-modal {
+  background-color: var(--Headline-White);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  right: 0;
+  top: 170px;
+  z-index: 500;
+  border-radius: 25px 0 0 25px;
+  padding: 50px;
+  min-width: 500px;
+}
+
+#cart-modal #cart-close-button {
+  font-size: 50px;
+  background-color: #f7f7f700;
+  border: #f7f7f700;
+  
+}
+
+#cart-modal .x-icon {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 54px;
+  color: var(--Primary-Black);
+  
+}
+
+#cart-modal .cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#cart-modal .cart-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+#cart-modal .cart-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#cart-modal .cart-list-item img {
+  height: 150px;
+}
+
+#cart-modal .product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+#cart-modal .product-name-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 40px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+#cart-modal input {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--Background-Dark-Green);
+}
+
+#cart-modal .product-quantity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+#cart-modal .product-quantity img {
+  height: 30px;
+}
+
+#cart-modal .product-quantity img:hover {
+  opacity: 0.7;
+}
+
+#cart-modal .cart-total {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 /*-- -------------------------- -->
