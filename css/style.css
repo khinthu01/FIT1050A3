@@ -368,6 +368,7 @@ html, body {
   align-items: flex-start;
   justify-content: flex-start;
   list-style: none;
+  gap: 25px;
 }
 
 #cart-modal .cart-list-item {
@@ -424,10 +425,20 @@ html, body {
 }
 
 #cart-modal .cart-total {
+  margin-top: 20px;
   display: flex;
   width: 100%;
-  justify-content: flex-end;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+
 }
+
+#cart-modal .remove-product {
+  background-color: #f7f7f700;
+  border: none;
+}
+
 
 /*-- -------------------------- -->
 <---           Hero             -->

@@ -6,6 +6,8 @@ $(document).ready(
         $('#cart-modal').hide();
         $('#cart').click(function() {
             $('#cart-modal').show();
+            populateCartList();
+            displayCartTotal();
         });
         $('#cart-close-button').click(function() {
             $('#cart-modal').hide();
@@ -16,8 +18,10 @@ $(document).ready(
 
         // maintain cart
         const cart = new Map();
+        let cartTotal = 0;
         
-        populateCartList();
+        
+        updateCartTotal();
 
         // remove cart item
         // source: https://stackoverflow.com/questions/32152580/click-not-being-registered-on-button
@@ -31,9 +35,42 @@ $(document).ready(
             //  remove the cart list item
 
             product.remove();
+            displayCartTotal();
         })
 
         // modify cart item quantity and total
+        $(document).on('change', '.product-quantity-input', function() {
+            let quantity = $(this).parent().find('input.product-quantity-input', this).val();
+       
+            let productName = $(this).parent().parent().children('.product-name-price').children('.product-name').html();
+            
+            //  remove item from cart variable
+            let product = cart.get(productName);
+            product.quantity = quantity;
+
+            product.total = quantity*product.price;
+            
+            
+            let productTotal = $(this).parent().parent().children('.product-total');
+
+            productTotal.empty();
+        
+            productTotal.html('$' + String(product.total.toFixed(2)));
+
+            displayCartTotal();
+        })
+
+        function updateCartTotal() {
+            cart.forEach(element => {
+                cartTotal += element.total
+            })
+        }
+
+        function displayCartTotal() {
+            updateCartTotal();
+            $('.cart-total').children('h3').empty();
+            $('.cart-total').children('h3').html('$' + String(cartTotal.toFixed(2)))
+        }
 
         function addItemToCart() {
             const product = {}
@@ -67,7 +104,9 @@ $(document).ready(
             cartCount = cartCount + 1;
             $( ' #cart-counter-value ').text(cartCount);
             
+            
             populateCartList();
+            displayCartTotal();
         }
 
         
@@ -98,7 +137,7 @@ $(document).ready(
 
                 let productPrice = document.createElement('h4');
                 productPrice.className = "source-sans-3-h4-dark product-price";
-                productPrice.append('$' + String(element.price));
+                productPrice.append('$' + String(element.price.toFixed(2)));
 
                 productNamePrice.appendChild(productPrice);
 
@@ -109,7 +148,7 @@ $(document).ready(
                 let productQuantity = document.createElement('input');
                 productQuantity.type = 'number';
                 productQuantity.className = 'product-quantity-input';
-                productQuantity.value=element.quantity;
+                productQuantity.value=String(element.quantity);
                 productQuantityMod.appendChild(productQuantity);
 
                 let binButton = document.createElement('button');
@@ -122,8 +161,8 @@ $(document).ready(
                 productDetails.appendChild(productQuantityMod);
 
                 let totalPrice = document.createElement('h4');
-                totalPrice.className = "libre-baskerville-h3-highlight";
-                totalPrice.append('$' + String(element.total))
+                totalPrice.className = "libre-baskerville-h3-highlight product-total";
+                totalPrice.append('$' + String(element.total.toFixed(2)))
 
                 productDetails.appendChild(totalPrice);
                 listItem.appendChild(productDetails);
