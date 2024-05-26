@@ -726,7 +726,10 @@ html, body {
       display: block;
     }
     
-    
+    #cs-navigation .home {
+      text-decoration: underline;
+      text-decoration-color: var(--Headline-White);
+    }
     
     #cs-navigation .cs-container {
       width: 80%;
@@ -1150,6 +1153,9 @@ html, body {
     list-style: none;
     gap: 5px;
   }
+
+
+
   #cs-footer-710 .cs-footer-nav .cs-link:hover {
     text-decoration: underline;
     text-decoration-color: var(--Headline-White);
