@@ -819,13 +819,13 @@ html, body {
       line-height: 1.5em;
       text-decoration: none;
       margin: 0;
-      color: var(--headerColor);
+      color: var(--Headline-White);
       display: block;
       position: relative;
       transition: color .3s;
     }
-    #cs-navigation .cs-li-link:hover {
-      color: var(--primary);
+    #cs-navigation .cs-li-link:hover h4, a {
+      text-decoration: underline;
     }
     #cs-navigation .cs-li-link.cs-active {
       font-weight: 700;
@@ -1150,9 +1150,14 @@ html, body {
     list-style: none;
     gap: 5px;
   }
+  #cs-footer-710 .cs-footer-nav .cs-link:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--Headline-White);
+  }
 
   #cs-footer-710 .cs-contact-ul .cs-link:hover {
     text-decoration: underline;
+    text-decoration-color: var(--Headline-White);
   }
 
   #cs-footer-710 .cs-link {
@@ -1182,42 +1187,8 @@ html, body {
       margin: -0.0625rem 0.75rem 0 0;
   }
 
-  #cs-footer-710 .cs-social {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-  }
-  #cs-footer-710 .cs-social-li {
-      list-style: none;
-  }
-  #cs-footer-710 .cs-social-link {
-      width: 2rem;
-      height: 2rem;
-      background-color: transparent;
-      border: 1px solid #f6e5db;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: background-color 0.3s;
-  }
-  #cs-footer-710 .cs-social-link:hover {
-      background-color: #f6e5db;
-  }
-  #cs-footer-710 .cs-social-link:hover .cs-default {
-      display: none;
-  }
-  #cs-footer-710 .cs-social-link:hover .cs-hover {
-      display: block;
-  }
-  #cs-footer-710 .cs-social-icon {
-      width: 0.75rem;
-      height: auto;
-      display: block;
-  }
+  
+
   #cs-footer-710 .cs-hover {
       display: none;
   }
